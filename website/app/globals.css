@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors */
+  --color-primary: #2563EB;
+  --color-primary-light: #60A5FA;
+  --color-primary-dark: #1E40AF;
+  --color-background: #FFFFFF;
+  --color-foreground: #1F2937;
+  --color-muted: #F3F4F6;
+  --color-muted-foreground: #6B7280;
+  --color-border: #E5E7EB;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #1F2937;
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
+
+  /* Border radius */
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration-offset: 4px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-muted);
+  border-radius: var(--radius-lg);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  border-radius: var(--radius-lg);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+/* Prompt content styling */
+.prompt-content {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 200ms ease-in-out;
+}
+
+.card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: scale(1.02);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
